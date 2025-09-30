@@ -27,7 +27,7 @@ const portfolioData: DataProps[] = [
     id: 3,
     name: 'Bed Times App Stories',
     webLink: 'https://bed-time-stories-2025.netlify.app/',
-    avatar: '/images/portfolio/project-3.png',
+    avatar: '/bed-time-story.png',
     category: 'UI/UX',
   },
   {
