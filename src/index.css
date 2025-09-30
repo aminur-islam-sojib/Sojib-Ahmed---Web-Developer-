@@ -75,3 +75,8 @@ body {
     flex: 0 0 50%; /* half width only on md+ */
   }
 }
+
+.dotIndicator {
+  border: 2px solid gray;
+  background: linear-gradient(to right, #ffdb70, #ffbb5c);
+}
