@@ -1,4 +1,5 @@
 import HeaderGenerator from '../HeaderGenerator';
+import { motion } from 'motion/react';
 
 interface DataProps {
   id?: number;
@@ -39,45 +40,24 @@ const portfolioData: DataProps[] = [
   },
   {
     id: 5,
-    name: 'Portfolio Animation',
-    webLink: 'https://codepen.io/demo/project-5',
-    avatar: '/images/portfolio/project-5.png',
+    name: 'Book Manager',
+    webLink: 'https://book-maneger.netlify.app/',
+    avatar: '/book-manager.png',
     category: 'Animation',
   },
   {
     id: 6,
-    name: 'API Management System',
-    webLink: 'https://github.io/demo/project-6',
-    avatar: '/images/portfolio/project-6.png',
-    category: 'Backend',
+    name: 'CS Service',
+    webLink: 'https://cs-service-002.netlify.app/',
+    avatar: '/cs-service.png',
+    category: 'Web Develop',
   },
   {
     id: 7,
-    name: 'SaaS Dashboard',
-    webLink: 'https://figma.com/community/file/123456',
-    avatar: '/images/portfolio/project-7.png',
-    category: 'Figma Design',
-  },
-  {
-    id: 8,
-    name: 'Blog CMS Platform',
-    webLink: 'https://vercel.app/demo/project-8',
-    avatar: '/images/portfolio/project-8.png',
-    category: 'Full Stack',
-  },
-  {
-    id: 9,
-    name: 'Marketing Landing Page',
-    webLink: 'https://example.com/project-9',
-    avatar: '/images/portfolio/project-9.png',
-    category: 'Landing Page',
-  },
-  {
-    id: 10,
-    name: 'Open Source UI Kit',
-    webLink: 'https://github.com/example/project-10',
-    avatar: '/images/portfolio/project-10.png',
-    category: 'Open Source',
+    name: 'Tick Tack Toe',
+    webLink: 'https://game-s-ahmed.netlify.app/',
+    avatar: '/tick-tac-toe.png',
+    category: 'Game',
   },
 ];
 
@@ -86,14 +66,19 @@ const Portfolio = () => {
     <div>
       <HeaderGenerator children={'Portfolio'} />
 
-      <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10"
+      >
         {portfolioData.map((data) => (
-          <div className="border-1 border-[#383838] rounded-2xl">
+          <div key={data.id} className="border-1 border-[#383838] rounded-2xl">
             <figure>
               <img
                 src={data.avatar}
                 alt={data.name}
-                className="h-50 w-100 object-cover rounded-t-2xl"
+                className="h-40 w-100 object-cover rounded-t-2xl"
               />
             </figure>
             <div className=" p-3">
@@ -102,7 +87,7 @@ const Portfolio = () => {
             </div>
           </div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };
