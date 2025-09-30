@@ -7,7 +7,14 @@ import avatar_4 from '/avatar-4.png';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 
-const testimonialsData = [
+interface TestimonialDataType {
+  id: number;
+  name: string;
+  date: string;
+  quote: string;
+  icon: string;
+}
+const testimonialsData: TestimonialDataType[] = [
   {
     id: 1,
     name: 'Henry William',
@@ -41,7 +48,7 @@ const testimonialsData = [
     icon: avatar_4,
   },
   {
-    id: 4,
+    id: 5,
     name: 'Emily Johnson',
     date: '16 July, 2025',
     quote:
@@ -82,24 +89,28 @@ const ClientReview = () => {
       {/* Carousel */}
       <div className="embla embla--two" ref={emblaRef}>
         <div className="embla__container gap-5 flex">
-          {testimonialsData.map(({ id, name, quote, icon: Icon }) => (
+          {testimonialsData.map((data) => (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
-              key={id}
+              key={data.id}
               className="embla__slide w-full md:w-1/2 bgGrayGradient flex flex-col gap-2 p-5 md:p-8 rounded-xl relative overflow-visible"
             >
               <div className="flex">
                 <figure className="p-2 bgGradient rounded-3xl flex justify-center items-center absolute -top-10">
-                  <img src={Icon} alt={name} className="h-15 w-auto" />
+                  <img
+                    src={data.icon}
+                    alt={data.name}
+                    className="h-15 w-auto"
+                  />
                 </figure>
                 <h1 className=" mt-7 md:mt-2 md:absolute md:top-1 left-2/7 md:ml-2 font-medium">
-                  {name}
+                  {data.name}
                 </h1>
               </div>
               <p className="tracking-tight md:mt-3 text-sm font-light text-gray-400 leading-[1.6]">
-                {quote}
+                {data.quote}
               </p>
             </motion.div>
           ))}
