@@ -1,6 +1,7 @@
 import HeaderGenerator from '../HeaderGenerator';
 import AboutCards from './AboutCards';
 import CanDoList from './CanDoList';
+import ClientReview from './ClientReview';
 
 const About = () => {
   return (
@@ -28,6 +29,9 @@ const About = () => {
         </div>
         <div>
           <CanDoList />
+        </div>
+        <div className="mt-5">
+          <ClientReview />
         </div>
       </div>
     </div>
