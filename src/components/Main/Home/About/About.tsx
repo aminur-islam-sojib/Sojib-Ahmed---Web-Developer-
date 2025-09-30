@@ -1,5 +1,6 @@
 import HeaderGenerator from '../HeaderGenerator';
 import AboutCards from './AboutCards';
+import CanDoList from './CanDoList';
 
 const About = () => {
   return (
@@ -22,8 +23,11 @@ const About = () => {
           solutions, I strive to ensure that every project I work on meets the
           highest standards of creativity and efficiency.
         </div>
-        <div className=" mt-10">
+        <div className=" my-10">
           <AboutCards />
+        </div>
+        <div>
+          <CanDoList />
         </div>
       </div>
     </div>
