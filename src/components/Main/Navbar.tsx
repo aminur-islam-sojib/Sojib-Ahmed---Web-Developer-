@@ -12,8 +12,8 @@ const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
 
   return (
     <motion.nav
-      initial={{ opacity: 0, x: 1000 }}
-      animate={{ opacity: 1, x: 0 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
       className="w-full lg:w-auto flex justify-center lg:justify-end py-5 px-4 rounded-tr-4xl rounded-tl-4xl lg:px-10 lg:rounded-tl-none bg-[#2b2b2cbf] backdrop-blur-[10px] border-t-[1px] lg:border-[1px] border-[#383838] lg:rounded-tr-2xl lg:rounded-bl-2xl"
     >

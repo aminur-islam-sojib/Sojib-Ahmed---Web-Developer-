@@ -2,6 +2,7 @@ import HeaderGenerator from '../HeaderGenerator';
 import AboutCards from './AboutCards';
 import CanDoList from './CanDoList';
 import ClientReview from './ClientReview';
+import { motion } from 'motion/react';
 
 const About = () => {
   return (
@@ -9,7 +10,12 @@ const About = () => {
       <HeaderGenerator children={'About'} />
 
       <div>
-        <div className=" text-sm text-gray-300 tracking-tight">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className=" text-sm text-gray-300 tracking-tight"
+        >
           I'm a passionate web developer, designer, and graphic designer with 6
           month of experience in transforming complex challenges into simple,
           beautiful, and intuitive solutions. With a strong foundation in both
@@ -23,7 +29,7 @@ const About = () => {
           <br /> With a dedication to minimalist design and user-centric
           solutions, I strive to ensure that every project I work on meets the
           highest standards of creativity and efficiency.
-        </div>
+        </motion.div>
         <div className=" my-10">
           <AboutCards />
         </div>
