@@ -3,6 +3,7 @@ import { useState } from 'react';
 import About from './Home/About/About';
 import Navbar from './Navbar';
 import Resume from './Home/Resume/Resume';
+import Portfolio from './Home/Portfolio/Portfolio';
 
 const MainBar = () => {
   const [activeTab, setActiveTab] = useState<string>('about');
@@ -17,6 +18,7 @@ const MainBar = () => {
 
       {activeTab === 'about' && <About />}
       {activeTab === 'resume' && <Resume />}
+      {activeTab === 'portfolio' && <Portfolio />}
     </div>
   );
 };
