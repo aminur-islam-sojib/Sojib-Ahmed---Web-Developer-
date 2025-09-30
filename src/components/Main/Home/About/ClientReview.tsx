@@ -88,13 +88,13 @@ const ClientReview = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
               key={id}
-              className="embla__slide w-full md:w-1/2 bgGrayGradient flex flex-col gap-2 p-8 rounded-xl relative overflow-visible"
+              className="embla__slide w-full md:w-1/2 bgGrayGradient flex flex-col gap-2 p-5 md:p-8 rounded-xl relative overflow-visible"
             >
               <div className="flex">
                 <figure className="p-2 bgGradient rounded-3xl flex justify-center items-center absolute -top-10">
                   <img src={Icon} alt={name} className="h-15 w-auto" />
                 </figure>
-                <h1 className=" mt-3 md:absolute md:top-1 left-3/8 font-medium">
+                <h1 className=" mt-7 md:mt-2 md:absolute md:top-1 left-2/7 md:ml-2 font-medium">
                   {name}
                 </h1>
               </div>
