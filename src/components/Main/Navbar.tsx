@@ -15,9 +15,9 @@ const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="w-full lg:w-auto flex justify-center lg:justify-end py-5 px-4 rounded-tr-4xl rounded-tl-4xl lg:px-10 lg:rounded-tl-none bg-[#2b2b2cbf] backdrop-blur-[10px] border-t-[1px] lg:border-[1px] border-[#383838] lg:rounded-tr-2xl lg:rounded-bl-2xl"
+      className="w-full lg:w-auto flex justify-center lg:justify-end py-3 md:py-5 p-1 md:px-4 rounded-tr-xl rounded-tl-xl sm:rounded-tr-3xl  sm:rounded-tl-3xl lg:px-10 lg:rounded-tl-none bg-[#2b2b2cbf] backdrop-blur-[10px] border-t-[1px] lg:border-[1px] border-[#383838] lg:rounded-tr-2xl lg:rounded-bl-2xl"
     >
-      <div className="flex gap-3 lg:gap-5 flex-wrap justify-center lg:flex-nowrap">
+      <div className="flex gap-2 sm:gap-3 lg:gap-5 flex-wrap justify-center lg:flex-nowrap">
         {navLinks.map((tab, index) => (
           <button
             key={index}
