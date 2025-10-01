@@ -1,6 +1,7 @@
 import FrontEnd from './SkillSection.tsx/FrontEnd';
 import BackEnd from './SkillSection.tsx/BackEnd';
 // import Tools from './SkillsSection/Tools';
+import VersionControls from './SkillSection.tsx/VersionControls';
 
 import { BookOpen } from 'lucide-react';
 import { motion } from 'motion/react';
@@ -8,7 +9,7 @@ import { motion } from 'motion/react';
 const datas = [
   { id: 1, components: FrontEnd },
   { id: 2, components: BackEnd },
-  //   { id: 3, components: Tools },
+  { id: 3, components: VersionControls },
 ];
 
 const Skills = () => {
