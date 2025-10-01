@@ -1,16 +1,16 @@
 import { CodeXml } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-const toolsSkills = [
-  { id: 601, name: 'VS Code', percentage: 85 },
-  { id: 602, name: 'NPM', percentage: 75 },
-  { id: 603, name: 'Yarn', percentage: 70 },
-  { id: 604, name: 'Webpack', percentage: 60 },
-  { id: 605, name: 'Vite', percentage: 75 },
-  { id: 606, name: 'Web Performance', percentage: 70 },
+const softSkills = [
+  { id: 701, name: 'Problem Solving', percentage: 80 },
+  { id: 702, name: 'Team Collaboration', percentage: 85 },
+  { id: 703, name: 'Communication', percentage: 80 },
+  { id: 704, name: 'Time Management', percentage: 75 },
+  { id: 705, name: 'Adaptability', percentage: 80 },
+  { id: 706, name: 'Critical Thinking', percentage: 75 },
 ];
 
-const ToolsAndOthers = () => {
+const SoftSkills = () => {
   return (
     <div className="px-2">
       <div className="relative border-l border-gray-500 pl-3">
@@ -39,7 +39,7 @@ const ToolsAndOthers = () => {
 
         {/* Skills List */}
         <div className=" pl-5 mt-3 flex flex-col gap-2">
-          {toolsSkills.map((skill, index) => (
+          {softSkills.map((skill, index) => (
             <motion.div
               key={skill.id}
               className="relative"
@@ -99,4 +99,4 @@ const ToolsAndOthers = () => {
   );
 };
 
-export default ToolsAndOthers;
+export default SoftSkills;
