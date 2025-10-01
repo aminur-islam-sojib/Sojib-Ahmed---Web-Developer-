@@ -29,7 +29,7 @@ const BackEnd = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <h1 className="text-xl font-medium p-1 pl-5 text-white">Back End</h1>
+          <h1 className="text-xl font-medium p-1 pl-5 text-white">Backend</h1>
         </motion.section>
 
         {/* Skills List */}

@@ -1,7 +1,7 @@
 import FrontEnd from './SkillSection.tsx/FrontEnd';
 import BackEnd from './SkillSection.tsx/BackEnd';
-// import BackEnd from './SkillsSection/BackEnd';
 // import Tools from './SkillsSection/Tools';
+
 import { BookOpen } from 'lucide-react';
 import { motion } from 'motion/react';
 
