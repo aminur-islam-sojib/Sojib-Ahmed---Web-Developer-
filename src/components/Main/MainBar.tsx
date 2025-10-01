@@ -4,6 +4,7 @@ import About from './Home/About/About';
 import Navbar from './Navbar';
 import Resume from './Home/Resume/Resume';
 import Portfolio from './Home/Portfolio/Portfolio';
+// import TestPortfolio from '../_Test/TestPortfolio';
 
 const MainBar = () => {
   const [activeTab, setActiveTab] = useState<string>('about');
