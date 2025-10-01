@@ -1,12 +1,12 @@
 // import FrontEnd from './SkillsSection/FrontEnd';
-import BackEnd from './SkillsSection/BackEnd';
+// import BackEnd from './SkillsSection/BackEnd';
 import Tools from './SkillsSection/Tools';
 import { BookOpen } from 'lucide-react';
 import { motion } from 'motion/react';
 
 const datas = [
   //   { id: 1, components: FrontEnd },
-  { id: 2, components: BackEnd },
+  //   { id: 2, components: BackEnd },
   { id: 3, components: Tools },
 ];
 
