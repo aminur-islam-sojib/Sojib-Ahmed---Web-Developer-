@@ -1,6 +1,7 @@
 import ExperienceTimeline from './ExperienceTimeLine';
 import HeaderGenerator from '../HeaderGenerator';
 import EducationTimeLine from './EducationTimeLine';
+import TestSkills from '../../../_Test/TestSkills';
 
 const Resume = () => {
   return (
@@ -9,8 +10,11 @@ const Resume = () => {
       <div>
         <EducationTimeLine />
       </div>
-      <div className=" mt-10">
+      <div className=" my-10">
         <ExperienceTimeline />
+      </div>
+      <div>
+        <TestSkills />
       </div>
     </div>
   );
