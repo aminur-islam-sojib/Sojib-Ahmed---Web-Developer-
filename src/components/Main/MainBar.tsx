@@ -4,6 +4,7 @@ import About from './Home/About/About';
 import Navbar from './Navbar';
 import Resume from './Home/Resume/Resume';
 import Portfolio from './Home/Portfolio/Portfolio';
+import Contact from './Home/Contact/Contact';
 // import TestPortfolio from '../_Test/TestPortfolio';
 
 const MainBar = () => {
@@ -20,6 +21,7 @@ const MainBar = () => {
       {activeTab === 'about' && <About />}
       {activeTab === 'resume' && <Resume />}
       {activeTab === 'portfolio' && <Portfolio />}
+      {activeTab === 'contact' && <Contact />}
     </div>
   );
 };
