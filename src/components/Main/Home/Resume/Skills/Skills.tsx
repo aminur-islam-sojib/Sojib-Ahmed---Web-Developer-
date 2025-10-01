@@ -1,16 +1,16 @@
-// import FrontEnd from './SkillsSection/FrontEnd';
-import BackEnd from './SkillsSection/BackEnd';
-import Tools from './SkillsSection/Tools';
+import FrontEnd from './SkillSection.tsx/FrontEnd';
+// import BackEnd from './SkillsSection/BackEnd';
+// import Tools from './SkillsSection/Tools';
 import { BookOpen } from 'lucide-react';
 import { motion } from 'motion/react';
 
 const datas = [
-  //   { id: 1, components: FrontEnd },
-  { id: 2, components: BackEnd },
-  { id: 3, components: Tools },
+  { id: 1, components: FrontEnd },
+  //   { id: 2, components: BackEnd },
+  //   { id: 3, components: Tools },
 ];
 
-const TestSkills = () => {
+const Skills = () => {
   return (
     <div className="px-3  md:px-10">
       <div className="relative border-l-1 border-gray-500 pl-6  space-y-4">
@@ -51,4 +51,4 @@ const TestSkills = () => {
   );
 };
 
-export default TestSkills;
+export default Skills;

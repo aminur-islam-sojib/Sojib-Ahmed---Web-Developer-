@@ -80,3 +80,40 @@ body {
   border: 2px solid gray;
   background: linear-gradient(to right, #ffdb70, #ffbb5c);
 }
+
+.skillsDotIndicator {
+  border: 2px solid gray;
+  background: linear-gradient(to right, #ffdb70, #ffbb5c);
+}
+
+.skills-per {
+  background-color: rgb(255, 221, 126);
+  position: relative;
+}
+.skills-per::after {
+  content: attr(data-per);
+  position: absolute;
+  top: -35px;
+  right: -10px;
+  background-color: rgb(93, 255, 75);
+  color: #1a1a1a;
+  font-weight: 500;
+  padding: 1px 3px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+.skills-per::before {
+  content: '';
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  top: -26px;
+  right: -6px;
+  background-color: rgb(93, 255, 75);
+  color: #1a1a1a;
+  font-weight: 500;
+  padding: 1px 3px;
+  border-radius: 1px;
+  z-index: 0;
+  rotate: 45deg;
+}
