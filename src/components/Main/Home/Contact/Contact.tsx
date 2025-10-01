@@ -1,13 +1,13 @@
-import TestMap from '../../../_Test/TestMap';
 import HeaderGenerator from '../HeaderGenerator';
 import ContactForm from './ContactForm';
+import Map from './Map';
 
 const Contact = () => {
   return (
     <div>
       <HeaderGenerator children={'Contact'} />
       <div>
-        <TestMap />
+        <Map />
       </div>
       <div>
         <ContactForm />
