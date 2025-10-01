@@ -5,7 +5,7 @@ const Map = () => {
 
   return (
     <section className=" my-5 mt-7">
-      <div className="relative w-full h-50 md:h-[400px]">
+      <div className="relative w-full h-50 md:h-[400px] shadow-lg">
         {/* Skeleton Loader */}
         {loading && (
           <div className="absolute inset-0 bg-gray-300 rounded-xl overflow-hidden">
