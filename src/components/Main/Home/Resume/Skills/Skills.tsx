@@ -1,6 +1,6 @@
 import FrontEnd from './SkillSection.tsx/FrontEnd';
 import BackEnd from './SkillSection.tsx/BackEnd';
-// import Tools from './SkillsSection/Tools';
+import DesignTools from './SkillSection.tsx/DesignTools';
 import VersionControls from './SkillSection.tsx/VersionControls';
 
 import { BookOpen } from 'lucide-react';
@@ -10,6 +10,7 @@ const datas = [
   { id: 1, components: FrontEnd },
   { id: 2, components: BackEnd },
   { id: 3, components: VersionControls },
+  { id: 3, components: DesignTools },
 ];
 
 const Skills = () => {
