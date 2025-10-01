@@ -31,7 +31,7 @@ const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
             {activeTab === tab && (
               <motion.span
                 layoutId="activeTab"
-                className="absolute -bottom-2 left-0 right-0 h-[2px] bg-amber-400"
+                className="absolute -bottom-0.5 md:-bottom-1 left-0 right-0 h-[2px] bg-amber-400"
                 initial={false}
                 transition={{
                   type: 'spring',
