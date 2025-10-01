@@ -43,14 +43,14 @@ const CanDoList = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             key={id}
-            className=" bgGrayGradient flex gap-4 p-8 bgGrayGradient rounded-xl relative "
+            className=" bgGrayGradient flex flex-col items-center sm:items-start sm:flex-row  gap-4 p-8 bgGrayGradient rounded-xl relative "
           >
-            <div className="bgIcon h-fit p-2 rounded-xl">
+            <div className="bgIcon h-fit w-fit p-2 rounded-xl">
               <Icon color="#ffda6b" size={28} />
             </div>
-            <div className=" flex flex-col gap-2">
+            <div className=" flex flex-col items-center sm:items-start gap-2">
               <h1 className="text-[18px] font-medium">{title}</h1>
-              <h1 className=" text-sm text-gray-300 tracking-tight">
+              <h1 className=" text-sm text-gray-300 tracking-tight text-center sm:text-left">
                 {description}
               </h1>
             </div>
