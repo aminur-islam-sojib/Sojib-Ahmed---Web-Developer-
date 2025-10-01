@@ -11,7 +11,7 @@ const AsideBar = () => {
   );
 
   return (
-    <div className="bg-[#1e1e1f] border-1 border-[#383838] rounded-2xl p-1 sm:p-5 relative">
+    <div className="bg-[#1e1e1f] border-1 border-[#383838] rounded-2xl p-5 relative">
       <motion.div
         initial={{ opacity: 0, y: -50, filter: 'blur(2px)' }}
         animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
