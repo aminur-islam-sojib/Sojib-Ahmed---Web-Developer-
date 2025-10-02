@@ -5,7 +5,6 @@ import avatar_2 from '/avatar-2.png';
 import avatar_3 from '/avatar-3.png';
 import avatar_4 from '/avatar-4.png';
 import useEmblaCarousel from 'embla-carousel-react';
-import Autoplay from 'embla-carousel-autoplay';
 
 interface TestimonialDataType {
   id: number;
@@ -14,6 +13,7 @@ interface TestimonialDataType {
   quote: string;
   icon: string;
 }
+
 const testimonialsData: TestimonialDataType[] = [
   {
     id: 1,
@@ -36,7 +36,7 @@ const testimonialsData: TestimonialDataType[] = [
     name: 'Emily Johnson',
     date: '16 July, 2025',
     quote:
-      'The professionalism and design expertise made the whole process smooth and enjoyable. I’ll definitely come back for future projects with Sojib.',
+      'The professionalism and design expertise made the whole process smooth and enjoyable. I ll definitely come back for future projects with Sojib.',
     icon: avatar_3,
   },
   {
@@ -52,21 +52,14 @@ const testimonialsData: TestimonialDataType[] = [
     name: 'Emily Johnson',
     date: '16 July, 2025',
     quote:
-      'The professionalism and design expertise made the whole process smooth and enjoyable. I’ll definitely come back for future projects with Sojib.',
+      'The professionalism and design expertise made the whole process smooth and enjoyable. I ll definitely come back for future projects with Sojib.',
     icon: avatar_3,
   },
 ];
 
 const ClientReview = () => {
-  const autoplay = Autoplay({
-    delay: 3500,
-    stopOnInteraction: false,
-    stopOnMouseEnter: true,
-  });
-
   const [emblaRef, emblaApi] = useEmblaCarousel(
-    { loop: true, align: 'start' },
-    [autoplay]
+    { loop: true, align: 'start' } // 👈 autoplay removed
   );
   const [selectedIndex, setSelectedIndex] = useState(0);
 
@@ -84,32 +77,32 @@ const ClientReview = () => {
 
   return (
     <div className="overflow-hidden">
-      <h1 className="text-xl font-semibold mb-15">Happy Clients</h1>
+      <h1 className="text-xl font-semibold ">Happy Clients</h1>
 
       {/* Carousel */}
       <div className="embla embla--two" ref={emblaRef}>
-        <div className="embla__container gap-5 flex">
+        <div className="embla__container gap-5 flex mt-20">
           {testimonialsData.map((data) => (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
               key={data.id}
-              className="embla__slide w-full md:w-1/2 bgGrayGradient flex flex-col gap-2 p-5 md:p-8 rounded-xl relative overflow-visible"
+              className="embla__slide w-full md:w-1/2 bgGrayGradient flex flex-col gap-2 p-3 md:p-5 rounded-xl relative overflow-visible"
             >
-              <div className="flex">
-                <figure className="p-2 bgGradient rounded-3xl flex justify-center items-center absolute -top-10">
+              <div className="flex items-start">
+                <figure className="p-2 bgGradient rounded-3xl flex justify-center items-center absolute -top-10 left-4">
                   <img
                     src={data.icon}
                     alt={data.name}
-                    className="h-15 w-auto"
+                    className="h-14 w-14 object-cover"
                   />
                 </figure>
-                <h1 className=" mt-7 md:mt-2 md:absolute md:top-1 left-2/7 md:ml-2 font-medium">
+                <h1 className="mt-7 md:mt-2 md:absolute md:top-0 md:left-[100px] font-medium">
                   {data.name}
                 </h1>
               </div>
-              <p className="tracking-tight md:mt-3 text-sm font-light text-gray-400 leading-[1.6]">
+              <p className="tracking-tight mt-1 md:mt-3 text-sm font-light text-gray-400 leading-relaxed">
                 {data.quote}
               </p>
             </motion.div>
@@ -123,7 +116,7 @@ const ClientReview = () => {
           <button
             key={idx}
             onClick={() => emblaApi && emblaApi.scrollTo(idx)}
-            className={`w-2 h-2 rounded-full transition ${
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
               idx === selectedIndex
                 ? 'bg-amber-400 scale-110'
                 : 'bg-amber-400/40'
