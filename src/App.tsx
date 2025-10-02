@@ -2,11 +2,11 @@ import { useSelector } from 'react-redux';
 import './App.css';
 import AsideBar from './components/AsideBar/AsideBar';
 import MainBar from './components/Main/MainBar';
-import Toast from './components/Main/Home/DownloadCV/Toast';
 import type { RootState } from './store/store';
+import { Toaster, toast } from 'sonner';
 
 function App() {
-  const toast = useSelector(
+  const isToast = useSelector(
     (state: RootState) => state.clickStateR.toastActive
   );
 
@@ -21,8 +21,11 @@ function App() {
         <div className="col-span-4 lg:col-span-3">
           <MainBar />
         </div>
-        <div className=" z-50">{toast && <Toast />}</div>
+        <div className=" z-50">
+          {isToast && toast.success('CV Downloaded Successfully!')}
+        </div>
       </section>
+      <Toaster position="top-center" />
     </section>
   );
 }
