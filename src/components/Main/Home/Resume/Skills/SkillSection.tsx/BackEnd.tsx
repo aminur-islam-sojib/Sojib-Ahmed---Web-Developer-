@@ -1,4 +1,4 @@
-import { CodeXml } from 'lucide-react';
+import { DatabaseZap } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const backendSkills = [
@@ -19,7 +19,7 @@ const BackEnd = () => {
           transition={{ duration: 1, type: 'spring', stiffness: 200 }}
         >
           <div className="bgIcon w-fit p-1 rounded">
-            <CodeXml color="#FFDB70" />
+            <DatabaseZap color="#FFDB70" />
           </div>
         </motion.section>
 

@@ -1,4 +1,4 @@
-import { CodeXml } from 'lucide-react';
+import { FolderCode } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const frontendSkills = [
@@ -23,7 +23,7 @@ const FrontEnd = () => {
           transition={{ duration: 1, type: 'spring', stiffness: 200 }}
         >
           <div className="bgIcon w-fit p-1 rounded">
-            <CodeXml color="#FFDB70" />
+            <FolderCode color="#FFDB70" />
           </div>
         </motion.section>
 

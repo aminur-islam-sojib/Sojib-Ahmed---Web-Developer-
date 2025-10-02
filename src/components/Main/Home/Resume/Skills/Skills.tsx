@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { lazy, Suspense } from 'react';
-import { BookOpen } from 'lucide-react';
+import { BrainCircuit } from 'lucide-react';
 
 const BackEnd = lazy(() => import('./SkillSection.tsx/BackEnd'));
 const FrontEnd = lazy(() => import('./SkillSection.tsx/FrontEnd'));
@@ -23,10 +23,10 @@ const datas = [
 const Skills = () => {
   return (
     <div className="px-3  md:px-10">
-      <div className="relative border-l-1 border-gray-500 pl-6  space-y-4">
+      <div className="relative border-l border-gray-500 pl-6  space-y-4">
         <section className="absolute -left-6">
           <div className="bgIcon w-fit p-3 rounded-xl">
-            <BookOpen color="#FFDB70" />
+            <BrainCircuit color="#FFDB70" />
           </div>
         </section>
         <section>
@@ -44,7 +44,7 @@ const Skills = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.15 }}
                   viewport={{ once: true }}
-                  className="relative mb-5 md:mb-10"
+                  className="relative mb-10 md:mb-20"
                 >
                   {/* Dot indicator */}
                   <span className="dotIndicator absolute mt-2 -left-[33px] w-4 h-4 rounded-full z-10 shadow-md"></span>

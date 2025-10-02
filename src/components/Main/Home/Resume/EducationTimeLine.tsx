@@ -24,7 +24,7 @@ const educations = [
 const EducationTimeLine = () => {
   return (
     <div className=" px-3  md:px-10">
-      <div className="relative border-l-1 border-gray-500 pl-6  space-y-8">
+      <div className="relative border-l border-gray-500 pl-6  space-y-8">
         <section className="absolute -left-6">
           <div className="bgIcon w-fit p-3 rounded-xl">
             <BookOpen color="#FFDB70" />

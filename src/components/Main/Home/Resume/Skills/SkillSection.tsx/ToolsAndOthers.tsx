@@ -1,4 +1,4 @@
-import { CodeXml } from 'lucide-react';
+import { Cog } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const toolsSkills = [
@@ -22,7 +22,7 @@ const ToolsAndOthers = () => {
           transition={{ duration: 1, type: 'spring', stiffness: 200 }}
         >
           <div className="bgIcon w-fit p-1 rounded">
-            <CodeXml color="#FFDB70" />
+            <Cog color="#FFDB70" />
           </div>
         </motion.section>
 

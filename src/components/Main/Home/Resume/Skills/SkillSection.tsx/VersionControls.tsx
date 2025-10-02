@@ -1,4 +1,4 @@
-import { CodeXml } from 'lucide-react';
+import { FolderGit2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const versionControlSkills = [
@@ -18,7 +18,7 @@ const VersionControls = () => {
           transition={{ duration: 1, type: 'spring', stiffness: 200 }}
         >
           <div className="bgIcon w-fit p-1 rounded">
-            <CodeXml color="#FFDB70" />
+            <FolderGit2 color="#FFDB70" />
           </div>
         </motion.section>
 
