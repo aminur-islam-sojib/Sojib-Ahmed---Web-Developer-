@@ -22,7 +22,8 @@ function App() {
           <MainBar />
         </div>
         <div className=" z-50">
-          {isToast && toast.success('CV Downloaded Successfully!')}
+          {isToast &&
+            toast.success('CV Downloaded Successfully!', { duration: 1000 })}
         </div>
       </section>
       <Toaster position="top-center" richColors={true} expand={false} />
