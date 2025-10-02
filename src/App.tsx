@@ -23,10 +23,15 @@ function App() {
         </div>
         <div className=" z-50">
           {isToast &&
-            toast.success('CV Downloaded Successfully!', { duration: 1000 })}
+            toast.success('CV Downloaded Successfully!', { duration: 2000 })}
         </div>
       </section>
-      <Toaster position="top-center" richColors={true} expand={false} />
+      <Toaster
+        position="top-center"
+        richColors={true}
+        expand={false}
+        visibleToasts={1}
+      />
     </section>
   );
 }
