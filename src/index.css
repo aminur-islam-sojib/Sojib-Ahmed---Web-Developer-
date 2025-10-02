@@ -5,6 +5,40 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ✅ CHANGED: Tailwind v3 @layer syntax with CSS variables */
+
+@layer base {
+  :root {
+    /* Hex colors */
+    /* --primary: #17ec33; */
+    /* --foreground: #93ffa2; */
+    /* --gradient-start: #ffdb70;
+    --gradient-end: #ffbb5c; */
+
+    --primary: #ffdb70;
+    --foreground: #ceb15a;
+    --gradient-start: #ffdb70;
+    --gradient-end: #ffbb5c;
+
+    /* HSL colors */
+    --background: 0 0% 100%;
+    --card: 0 0% 100%;
+    --border: 220 13% 91%;
+    --muted-foreground: 220 9% 46%;
+
+    --rounded: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
 body {
   color: #fafafa;
   font-family: 'Poppins', sans-serif;
@@ -125,38 +159,4 @@ body {
 
 .z-Negative {
   z-index: -1;
-}
-
-/* ✅ CHANGED: Tailwind v3 @layer syntax with CSS variables */
-
-@layer base {
-  :root {
-    /* Hex colors */
-    /* --primary: #17ec33; */
-    /* --foreground: #93ffa2; */
-    /* --gradient-start: #ffdb70;
-    --gradient-end: #ffbb5c; */
-
-    --primary: #ffdb70;
-    --foreground: #ceb15a;
-    --gradient-start: #ffdb70;
-    --gradient-end: #ffbb5c;
-
-    /* HSL colors */
-    --background: 0 0% 100%;
-    --card: 0 0% 100%;
-    --border: 220 13% 91%;
-    --muted-foreground: 220 9% 46%;
-
-    --rounded: 0.5rem;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
 }
