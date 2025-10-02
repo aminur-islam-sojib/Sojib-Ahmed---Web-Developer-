@@ -1,6 +1,7 @@
 import { lazy, Suspense, useState } from 'react';
 import { AboutSkeleton } from './Skeleton/AboutSkeleton/AboutSkelteon';
 import ResumeSkeleton from './Skeleton/ResumeSkeleton/ResumeSkeleton';
+import PortfolioSkeleton from './Skeleton/PortfolioSkeleton/PortfolioSkeleton';
 
 // import About from './Home/About/About';
 const About = lazy(() => import('./Home/About/About'));
@@ -31,7 +32,7 @@ const MainBar = () => {
         </Suspense>
       )}
       {activeTab === 'portfolio' && (
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<PortfolioSkeleton />}>
           <Portfolio />
         </Suspense>
       )}

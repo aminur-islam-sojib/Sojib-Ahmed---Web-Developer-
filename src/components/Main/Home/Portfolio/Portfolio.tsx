@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 import { Eye } from 'lucide-react';
 import { useState, useEffect } from 'react'; // ✅ ADDED
 import { Skeleton } from '@/components/ui/skeleton'; // ✅ ADDED
-import { SkeletonCard } from '../../Skeleton/SkeletonCard';
+import { SkeletonCard } from '../../Skeleton/PortfolioSkeleton/SkeletonCard';
 
 interface DataProps {
   id?: number;
