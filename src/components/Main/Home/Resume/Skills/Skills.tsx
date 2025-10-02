@@ -7,7 +7,9 @@ const FrontEnd = lazy(() => import('./SkillSection.tsx/FrontEnd'));
 const SoftSkills = lazy(() => import('./SkillSection.tsx/SoftSkills'));
 const DesignTools = lazy(() => import('./SkillSection.tsx/DesignTools'));
 const ToolsAndOthers = lazy(() => import('./SkillSection.tsx/ToolsAndOthers'));
-const VersionControls = lazy(() => import('./SkillSection.tsx/ToolsAndOthers'));
+const VersionControls = lazy(
+  () => import('./SkillSection.tsx/VersionControls')
+);
 
 const datas = [
   { id: 1, components: FrontEnd },

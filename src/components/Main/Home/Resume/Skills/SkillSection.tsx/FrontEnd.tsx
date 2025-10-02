@@ -81,7 +81,7 @@ const FrontEnd = () => {
                 >
                   {/* Percentage Tooltip */}
                   <motion.div
-                    className="absolute -top-8 -right-2.5 z-100 bg-green-400 text-gray-900 font-medium px-1 py-0.5 rounded text-xs whitespace-nowrap"
+                    className="absolute -top-8 -right-2.5 z-10 bg-green-400 text-gray-900 font-medium px-1 py-0.5 rounded text-xs whitespace-nowrap"
                     initial={{ opacity: 0, y: 5 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -91,7 +91,10 @@ const FrontEnd = () => {
                     }}
                   >
                     {skill.percentage}%{/* Arrow/Triangle */}
-                    <div className="absolute h-3 w-3 -bottom-0.5 right-3 bg-green-400 rotate-45 z-[-1]"></div>
+                    <div
+                      style={{ zIndex: -1 }}
+                      className="absolute h-3 w-3 -bottom-0.5 right-3 bg-green-400 rotate-45"
+                    ></div>
                   </motion.div>
                 </motion.div>
               </div>

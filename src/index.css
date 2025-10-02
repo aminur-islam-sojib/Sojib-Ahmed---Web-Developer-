@@ -123,6 +123,10 @@ body {
   rotate: 45deg;
 }
 
+.z-Negative {
+  z-index: -1;
+}
+
 /* ✅ CHANGED: Tailwind v3 @layer syntax with CSS variables */
 @layer base {
   :root {
