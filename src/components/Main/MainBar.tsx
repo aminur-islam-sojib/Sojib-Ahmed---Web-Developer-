@@ -1,11 +1,11 @@
-// MainBar.tsx
-import { useState } from 'react';
-import About from './Home/About/About';
-import Navbar from './Navbar';
-import Resume from './Home/Resume/Resume';
-import Portfolio from './Home/Portfolio/Portfolio';
-import Contact from './Home/Contact/Contact';
-// import TestPortfolio from '../_Test/TestPortfolio';
+import { lazy, Suspense, useState } from 'react';
+
+// import About from './Home/About/About';
+const About = lazy(() => import('./Home/About/About'));
+const Navbar = lazy(() => import('./Navbar'));
+const Resume = lazy(() => import('./Home/Resume/Resume'));
+const Portfolio = lazy(() => import('./Home/Portfolio/Portfolio'));
+const Contact = lazy(() => import('./Home/Contact/Contact'));
 
 const MainBar = () => {
   const [activeTab, setActiveTab] = useState<string>('about');
@@ -18,10 +18,26 @@ const MainBar = () => {
         <Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
       </div>
 
-      {activeTab === 'about' && <About />}
-      {activeTab === 'resume' && <Resume />}
-      {activeTab === 'portfolio' && <Portfolio />}
-      {activeTab === 'contact' && <Contact />}
+      {activeTab === 'about' && (
+        <Suspense fallback={<div>Loading...</div>}>
+          <About />
+        </Suspense>
+      )}
+      {activeTab === 'resume' && (
+        <Suspense fallback={<div>Loading...</div>}>
+          <Resume />
+        </Suspense>
+      )}
+      {activeTab === 'portfolio' && (
+        <Suspense fallback={<div>Loading...</div>}>
+          <Portfolio />
+        </Suspense>
+      )}
+      {activeTab === 'contact' && (
+        <Suspense fallback={<div>Loading...</div>}>
+          <Contact />
+        </Suspense>
+      )}
     </div>
   );
 };
