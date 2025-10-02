@@ -4,11 +4,8 @@ import { lazy, Suspense, useState } from 'react';
 const About = lazy(() => import('./Home/About/About'));
 const Navbar = lazy(() => import('./Navbar'));
 const Resume = lazy(() => import('./Home/Resume/Resume'));
-// const Portfolio = lazy(() => import('./Home/Portfolio/Portfolio'));
+const Portfolio = lazy(() => import('./Home/Portfolio/Portfolio'));
 const Contact = lazy(() => import('./Home/Contact/Contact'));
-
-// Test File
-const TestPortfolio = lazy(() => import('../_Test/TestPortfolio'));
 
 const MainBar = () => {
   const [activeTab, setActiveTab] = useState<string>('about');
@@ -33,7 +30,7 @@ const MainBar = () => {
       )}
       {activeTab === 'portfolio' && (
         <Suspense fallback={<div>Loading...</div>}>
-          <TestPortfolio />
+          <Portfolio />
         </Suspense>
       )}
       {activeTab === 'contact' && (
