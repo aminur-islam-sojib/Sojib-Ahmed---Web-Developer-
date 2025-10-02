@@ -25,7 +25,7 @@ function App() {
           {isToast && toast.success('CV Downloaded Successfully!')}
         </div>
       </section>
-      <Toaster position="top-center" />
+      <Toaster position="top-center" richColors={true} expand={false} />
     </section>
   );
 }
