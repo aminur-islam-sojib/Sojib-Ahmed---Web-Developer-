@@ -2,17 +2,11 @@ import { CodeXml } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const frontendSkills = [
-  { id: 101, name: 'HTML', percentage: 90 },
-  { id: 102, name: 'CSS', percentage: 85 },
   { id: 103, name: 'JavaScript', percentage: 80 },
   { id: 104, name: 'React', percentage: 75 },
   { id: 105, name: 'TypeScript', percentage: 70 },
   { id: 106, name: 'Tailwind CSS', percentage: 80 },
-  { id: 107, name: 'Bootstrap', percentage: 75 },
-  { id: 108, name: 'Next.js', percentage: 70 },
   { id: 109, name: 'Redux', percentage: 65 },
-  { id: 110, name: 'Context API', percentage: 70 },
-  { id: 111, name: 'REST API', percentage: 75 },
   { id: 112, name: 'Responsive Design', percentage: 85 },
 ];
 
@@ -24,7 +18,8 @@ const FrontEnd = () => {
         <motion.section
           className="absolute -left-4"
           initial={{ scale: 0, rotate: -180 }}
-          animate={{ scale: 1, rotate: 0 }}
+          whileInView={{ scale: 1, rotate: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 1, type: 'spring', stiffness: 200 }}
         >
           <div className="bgIcon w-fit p-1 rounded">
@@ -35,30 +30,33 @@ const FrontEnd = () => {
         {/* Title */}
         <motion.section
           initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <h1 className="text-xl font-medium p-1 pl-5 text-white">Frontend</h1>
         </motion.section>
 
         {/* Skills List */}
-        <div className=" pl-5 mt-3 flex flex-col gap-2">
+        <div className="pl-5 mt-3 flex flex-col gap-2">
           {frontendSkills.map((skill, index) => (
             <motion.div
               key={skill.id}
               className="relative"
               initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.4, delay: index * 0.1 + 0.3 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.3 }} // triggers when 30% visible
+              transition={{ duration: 0.4, delay: index * 0.1 }}
             >
               {/* Dot Indicator */}
               <motion.span
-                className="skillsDotIndicator absolute mt-[4px] -left-[37px] w-2 h-2  z-10 shadow-md"
+                className="skillsDotIndicator absolute mt-[4px] -left-[37px] w-2 h-2 z-10 shadow-md"
                 initial={{ scale: 0, rotate: 0 }}
-                animate={{ scale: 1, rotate: 45 }}
+                whileInView={{ scale: 1, rotate: 45 }}
+                viewport={{ once: true }}
                 transition={{
                   duration: 0.3,
-                  delay: index * 0.1 + 0.4,
+                  delay: index * 0.1 + 0.2,
                   type: 'spring',
                   stiffness: 300,
                 }}
@@ -73,21 +71,23 @@ const FrontEnd = () => {
                 <motion.div
                   className="h-full bg-amber-200 rounded relative"
                   initial={{ width: '0%' }}
-                  animate={{ width: `${skill.percentage}%` }}
+                  whileInView={{ width: `${skill.percentage}%` }}
+                  viewport={{ once: true }}
                   transition={{
                     duration: 1,
-                    delay: index * 0.1 + 0.5,
+                    delay: index * 0.1 + 0.3,
                     ease: 'easeOut',
                   }}
                 >
                   {/* Percentage Tooltip */}
                   <motion.div
-                    className="absolute -top-8  -right-2.5 z-100 bg-green-400 text-gray-900 font-medium px-1 py-0.5 rounded text-xs whitespace-nowrap"
+                    className="absolute -top-8 -right-2.5 z-100 bg-green-400 text-gray-900 font-medium px-1 py-0.5 rounded text-xs whitespace-nowrap"
                     initial={{ opacity: 0, y: 5 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
                     transition={{
                       duration: 0.3,
-                      delay: index * 0.1 + 1.5,
+                      delay: index * 0.1 + 1,
                     }}
                   >
                     {skill.percentage}%{/* Arrow/Triangle */}

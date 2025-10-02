@@ -1,12 +1,13 @@
-import FrontEnd from './SkillSection.tsx/FrontEnd';
-import BackEnd from './SkillSection.tsx/BackEnd';
-import DesignTools from './SkillSection.tsx/DesignTools';
-import VersionControls from './SkillSection.tsx/VersionControls';
-import ToolsAndOthers from './SkillSection.tsx/ToolsAndOthers';
-import SoftSkills from './SkillSection.tsx/SoftSkills';
-
-import { BookOpen } from 'lucide-react';
 import { motion } from 'motion/react';
+import { lazy, Suspense } from 'react';
+import { BookOpen } from 'lucide-react';
+
+const BackEnd = lazy(() => import('./SkillSection.tsx/BackEnd'));
+const FrontEnd = lazy(() => import('./SkillSection.tsx/FrontEnd'));
+const SoftSkills = lazy(() => import('./SkillSection.tsx/SoftSkills'));
+const DesignTools = lazy(() => import('./SkillSection.tsx/DesignTools'));
+const ToolsAndOthers = lazy(() => import('./SkillSection.tsx/ToolsAndOthers'));
+const VersionControls = lazy(() => import('./SkillSection.tsx/ToolsAndOthers'));
 
 const datas = [
   { id: 1, components: FrontEnd },
@@ -47,7 +48,9 @@ const Skills = () => {
                   <span className="dotIndicator absolute mt-2 -left-[33px] w-4 h-4 rounded-full z-10 shadow-md"></span>
 
                   <div className=" rounded-xl pl-3">
-                    <Component />
+                    <Suspense fallback={<div>Loading...</div>}>
+                      <Component />
+                    </Suspense>
                   </div>
                 </motion.div>
               );
