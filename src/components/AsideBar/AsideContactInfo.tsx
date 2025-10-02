@@ -60,7 +60,7 @@ const AsideContactInfo = () => {
             <div key={id} className=" min-w-0">
               <div className=" flex gap-3">
                 <div className="h-12 w-12 bgIcon flex justify-center items-center rounded-xl relative">
-                  <Icon color="#FFDB70" />
+                  <Icon color="var(--primary)" />
                 </div>
                 <div className=" flex-1 overflow-hidden min-w-0">
                   <h1 className=" text-gray-500 text-xs">{title}</h1>

@@ -24,7 +24,7 @@ const PersonalInfo = () => {
           <h1 className=" text-2xl text-center m-3 font-medium">Sojib Ahmed</h1>
         </div>
         <div className="flex lg:justify-center lg:items-center ml-3 lg:ml-0">
-          <div className=" bg-[#2b2b2c] w-fit text-[12px]  py-1 px-4 rounded-md border-r-2 border-amber-400">
+          <div className=" bg-[#2b2b2c] w-fit text-[12px]  py-1 px-4 rounded border-r-2 border-[var(--primary)]">
             <h1> Web Developer</h1>
           </div>
         </div>

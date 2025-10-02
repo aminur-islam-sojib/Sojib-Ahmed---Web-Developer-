@@ -50,7 +50,7 @@ const SocialMedia = () => {
           <div key={id} className="bgGradient p-2 rounded-md">
             <a href={url} target="_blank">
               {' '}
-              <Icon color="#FFDB70" size={16} />{' '}
+              <Icon color="var(--primary)" size={16} />{' '}
             </a>
           </div>
         );

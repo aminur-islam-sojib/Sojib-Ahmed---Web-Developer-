@@ -13,7 +13,7 @@ const HeaderGenerator = ({ children }: HeaderGeneratorProps) => {
       transition={{ duration: 0.5 }}
     >
       <h1 className="text-3xl font-semibold mt-2">{children}</h1>
-      <div className="my-5 py-[2px] w-10 bg-amber-400 rounded-2xl"></div>
+      <div className="my-5 py-[2px] w-10 bg-[var(--primary)] rounded-2xl"></div>
     </motion.div>
   );
 };

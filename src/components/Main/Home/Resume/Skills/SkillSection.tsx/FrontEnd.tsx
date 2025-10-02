@@ -23,7 +23,7 @@ const FrontEnd = () => {
           transition={{ duration: 1, type: 'spring', stiffness: 200 }}
         >
           <div className="bgIcon w-fit p-1 rounded">
-            <FolderCode color="#FFDB70" />
+            <FolderCode color="var(--primary)" />
           </div>
         </motion.section>
 
@@ -69,7 +69,7 @@ const FrontEnd = () => {
               <div className="h-1 bg-gray-700 mt-2 rounded overflow-visible relative">
                 {/* Animated Skill Bar */}
                 <motion.div
-                  className="h-full bg-amber-200 rounded relative"
+                  className="h-full bg-primary rounded relative"
                   initial={{ width: '0%' }}
                   whileInView={{ width: `${skill.percentage}%` }}
                   viewport={{ once: true }}

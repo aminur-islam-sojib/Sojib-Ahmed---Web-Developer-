@@ -16,7 +16,7 @@ const ExperienceTimeLine = () => {
       <div className="relative border-l border-gray-500 pl-6  space-y-8">
         <section className="absolute -left-6">
           <div className="bgIcon w-fit p-3 rounded-xl">
-            <BriefcaseBusiness color="#FFDB70" />
+            <BriefcaseBusiness color="var(--primary)" />
           </div>
         </section>
         <section>
@@ -40,7 +40,9 @@ const ExperienceTimeLine = () => {
                   <h3 className="text-[15px] font-semibold text-white">
                     {exp.company}
                   </h3>
-                  <p className="text-xs text-amber-200 my-1">{exp.duration}</p>
+                  <p className="text-xs text-foreground opacity-90 my-1">
+                    {exp.duration}
+                  </p>
                   <p className="text-sm text-gray-400 dark:text-gray-400">
                     {exp.role}
                   </p>

@@ -45,7 +45,9 @@ const AboutCards = () => {
           key={data.id}
           className=" flex cursor-pointer flex-col hover:scale-105 duration-400 hover:shadow-2xl justify-center items-center p-5 uppercase border-[2px] border-[#383838] rounded-2xl shadow-lg bg-gradient-to-br from-[#404040] from-0% to-[#40404000] to-50%"
         >
-          <h1 className=" text-4xl text-amber-200 font-medium">{data.value}</h1>
+          <h1 className=" text-4xl text-[var(--primary)] font-medium">
+            {data.value}
+          </h1>
           <h1 className=" text-center text-[#d6d6d6] text-sm mt-3">
             {data.label}
           </h1>

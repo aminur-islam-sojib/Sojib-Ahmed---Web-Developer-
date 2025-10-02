@@ -47,14 +47,14 @@ const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab }) => {
             onClick={() => handleTabClick(tab)}
             className={`relative capitalize text-[13px] lg:text-[15px] cursor-pointer font-medium transition-colors duration-300 ease-in-out whitespace-nowrap ${
               activeTab === tab && tab !== 'download cv'
-                ? 'text-amber-400'
+                ? 'text-primary'
                 : 'text-white hover:text-gray-400'
             }`}
           >
             {activeTab === tab && tab !== 'download cv' && (
               <motion.span
                 layoutId="activeTab"
-                className="absolute -bottom-0.5 md:-bottom-1 left-0 right-0 h-[2px] bg-amber-400"
+                className="absolute -bottom-0.5 md:-bottom-1 left-0 right-0 h-[2px] bg-primary"
                 initial={false}
                 transition={{
                   type: 'spring',

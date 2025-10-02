@@ -27,7 +27,7 @@ const EducationTimeLine = () => {
       <div className="relative border-l border-gray-500 pl-6  space-y-8">
         <section className="absolute -left-6">
           <div className="bgIcon w-fit p-3 rounded-xl">
-            <BookOpen color="#FFDB70" />
+            <BookOpen color="var(--primary)" />
           </div>
         </section>
         <section>
@@ -50,7 +50,7 @@ const EducationTimeLine = () => {
               <h3 className="text-[15px] font-semibold text-white">
                 {edu.institution}
               </h3>
-              <p className="text-xs text-amber-200 my-1">{edu.session}</p>
+              <p className="text-xs text-foreground my-1">{edu.session}</p>
               <p className="text-sm text-gray-400 dark:text-gray-400">
                 {edu.subject}
               </p>

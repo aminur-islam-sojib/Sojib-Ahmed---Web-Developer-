@@ -4,7 +4,7 @@ export default function SentButton() {
   return (
     <div className=" flex w-full md:justify-end my-5">
       <button
-        className="relative w-full  h-12 md:w-auto px-5 rounded-xl text-[#ffdb70] bg-[#1e1e1f]  cursor-pointer border-none z-[1] group"
+        className="relative w-full  h-12 md:w-auto px-5 rounded-xl text-[var(--primary)] bg-[#1e1e1f]  cursor-pointer border-none z-[1] group"
         style={{
           boxShadow: '0 2px 5px #00000040',
           transition: '0.25s ease-in',

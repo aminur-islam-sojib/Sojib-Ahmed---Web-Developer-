@@ -118,8 +118,8 @@ const ClientReview = () => {
             onClick={() => emblaApi && emblaApi.scrollTo(idx)}
             className={`w-2 h-2 rounded-full transition-all duration-300 ${
               idx === selectedIndex
-                ? 'bg-amber-400 scale-110'
-                : 'bg-amber-400/40'
+                ? 'bg-[var(--primary)] scale-110'
+                : 'bg-[var(--primary)] opacity-40'
             }`}
             aria-label={`Go to slide ${idx + 1}`}
           />

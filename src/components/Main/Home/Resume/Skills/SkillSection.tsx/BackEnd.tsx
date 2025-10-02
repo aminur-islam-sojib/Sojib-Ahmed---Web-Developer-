@@ -19,7 +19,7 @@ const BackEnd = () => {
           transition={{ duration: 1, type: 'spring', stiffness: 200 }}
         >
           <div className="bgIcon w-fit p-1 rounded">
-            <DatabaseZap color="#FFDB70" />
+            <DatabaseZap color="var(--primary)" />
           </div>
         </motion.section>
 
@@ -62,7 +62,7 @@ const BackEnd = () => {
               <div className="h-1 bg-gray-700 mt-2 rounded overflow-visible relative">
                 {/* Animated Skill Bar */}
                 <motion.div
-                  className="h-full bg-amber-200 rounded relative"
+                  className="h-full bg-[var(--primary)] rounded relative"
                   initial={{ width: '0%' }}
                   animate={{ width: `${skill.percentage}%` }}
                   transition={{

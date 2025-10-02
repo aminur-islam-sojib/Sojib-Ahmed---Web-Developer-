@@ -46,7 +46,7 @@ const CanDoList = () => {
             className=" bgGrayGradient flex flex-col items-center sm:items-start sm:flex-row  gap-4 p-8 bgGrayGradient rounded-xl relative "
           >
             <div className="bgIcon h-fit w-fit p-2 rounded-xl">
-              <Icon color="#ffda6b" size={28} />
+              <Icon color="var(--primary)" size={28} />
             </div>
             <div className=" flex flex-col items-center sm:items-start gap-2">
               <h1 className="text-[18px] font-medium">{title}</h1>

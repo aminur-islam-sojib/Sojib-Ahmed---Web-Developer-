@@ -26,7 +26,7 @@ const Skills = () => {
       <div className="relative border-l border-gray-500 pl-6  space-y-4">
         <section className="absolute -left-6">
           <div className="bgIcon w-fit p-3 rounded-xl">
-            <BrainCircuit color="#FFDB70" />
+            <BrainCircuit color="var(--primary)" />
           </div>
         </section>
         <section>

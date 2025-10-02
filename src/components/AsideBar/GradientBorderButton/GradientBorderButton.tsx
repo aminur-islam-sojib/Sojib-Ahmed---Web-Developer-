@@ -20,7 +20,7 @@ export default function GradientBorderButton() {
     <div className="">
       <button
         onClick={handleGradientButton}
-        className="relative h-12 w-auto px-5 text-[#ffdb70] bg-[#1e1e1f] rounded-tr-2xl rounded-bl-2xl cursor-pointer border-none z-[1] group"
+        className="relative h-12 w-auto px-5 text-[var(--primary)] bg-[#1e1e1f] rounded-tr-2xl rounded-bl-2xl cursor-pointer border-none z-[1] group"
         style={{
           boxShadow: '0 2px 5px #00000040',
           transition: '0.25s ease-in',

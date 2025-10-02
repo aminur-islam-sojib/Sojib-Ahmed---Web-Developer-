@@ -19,19 +19,19 @@ const ContactForm = () => {
             <input
               type="text"
               placeholder="Name"
-              className="p-3 pl-4 bg-transparent border border-[#383838]  w-full rounded-[8px] focus:outline-none focus:ring-[1px] focus:ring-amber-500 focus:border-amber-500"
+              className="p-3 pl-4 bg-transparent border border-[#383838]  w-full rounded-[8px] focus:outline-none focus:ring-[1px] focus:ring-[var(--primary)] focus:border-[var(--primary)]"
             />
             <input
               type="email"
               placeholder="Email"
-              className="p-3 pl-4 bg-transparent border border-[#383838] w-full rounded-[8px] focus:outline-none focus:ring-[1px] focus:ring-amber-500 focus:border-amber-500"
+              className="p-3 pl-4 bg-transparent border border-[#383838] w-full rounded-[8px] focus:outline-none focus:ring-[1px] focus:ring-[var(--primary)] focus:border-[var(--primary)]"
             />
           </div>
           <textarea
             name=""
             id=""
             rows={5}
-            className="p-3 pl-4 bg-transparent border border-[#383838] rounded-xl focus:outline-none focus:ring-[1px] focus:ring-amber-500 focus:border-amber-500"
+            className="p-3 pl-4 bg-transparent border border-[#383838] rounded-xl focus:outline-none focus:ring-[1px] focus:ring-[var(--primary)] focus:border-[var(--primary)]"
             placeholder="Your Message"
           ></textarea>
           <SentButton />
