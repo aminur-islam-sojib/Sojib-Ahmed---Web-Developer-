@@ -14,7 +14,7 @@ const PersonalInfo = () => {
         <figure className=" p-2 bgGradient rounded-3xl">
           <img
             src={pfp2}
-            alt=""
+            alt="Sojib Ahmed, Frontend Web Developer"
             className="h-[110px] w-auto rounded-2xl object-cover"
           />
         </figure>
