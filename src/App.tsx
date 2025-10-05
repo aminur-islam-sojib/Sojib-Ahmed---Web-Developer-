@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
 import './App.css';
 import AsideBar from './components/AsideBar/AsideBar';
 import MainBar from './components/Main/MainBar';
@@ -6,13 +7,20 @@ import type { RootState } from './store/store';
 import { Toaster, toast } from 'sonner';
 import { HelmetProvider } from 'react-helmet-async';
 import SEO from './SEO';
+import { initGA, trackPageView } from './analytics'; // Import analytics
 
 function App() {
   const isToast = useSelector(
     (state: RootState) => state.clickStateR.toastActive
   );
 
-  // SEO Data - Updated with new description and keywords
+  // Initialize Google Analytics on app load
+  useEffect(() => {
+    initGA();
+    trackPageView(window.location.pathname);
+  }, []);
+
+  // SEO Data for SPA
   const seoData = {
     title: 'Sojib Ahmed | Frontend Web Developer',
     description:
@@ -31,7 +39,7 @@ function App() {
 
   return (
     <HelmetProvider>
-      {/* SEO Component with Updated Data */}
+      {/* SEO Component */}
       <SEO
         title={seoData.title}
         description={seoData.description}
