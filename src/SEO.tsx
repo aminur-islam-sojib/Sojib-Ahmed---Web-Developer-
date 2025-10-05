@@ -6,7 +6,7 @@ interface SEOProps {
   image?: string;
   url?: string;
   keywords?: string;
-  socialLinks?: string[]; // Facebook, Instagram, GitHub, LinkedIn
+  socialLinks?: string[];
 }
 
 const SEO: React.FC<SEOProps> = ({
@@ -30,6 +30,12 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="keywords" content={keywords} />
       <meta name="author" content="Sojib Ahmed" />
 
+      {/* Google Search Console Verification */}
+      <meta
+        name="google-site-verification"
+        content="5F1Gptr8XpjMHvoEdKrItuM_EP73uKTS9SHyxkocHNk"
+      />
+
       {/* Open Graph / Facebook */}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
@@ -46,7 +52,7 @@ const SEO: React.FC<SEOProps> = ({
       {/* Canonical URL */}
       <link rel="canonical" href={url} />
 
-      {/* JSON-LD Schema for Person */}
+      {/* JSON-LD Schema */}
       <script type="application/ld+json">
         {JSON.stringify({
           '@context': 'https://schema.org',
